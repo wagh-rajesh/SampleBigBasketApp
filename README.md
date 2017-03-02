@@ -5,7 +5,7 @@ application up and running.
 
 Things to run before starting app
 
-* Clone the app
+* Clone the app and run "bundle install"
 
 * Run the migrations : rake db:migrate
 
