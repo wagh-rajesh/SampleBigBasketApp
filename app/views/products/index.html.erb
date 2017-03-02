@@ -1,0 +1,41 @@
+<div id="notice" class="alert-success" ><%= notice %></div>
+
+<table>
+  <tr>
+    <td><h3 style="padding-left: 20px">Products Inventory</h3></td> <br /> 
+    <div>&nbsp;</div>
+    <td style="padding-left: 10px;padding-top: 10px"><%= link_to '', new_product_path, :class => "glyphicon glyphicon-plus-sign btn btn-default" %></td>
+  </tr>
+</table>
+
+<div class="">
+<table class="table table-hover" align="center">
+  <thead>
+    <tr style="background:  #E0E0E0 ">
+      <th>Name</th>
+      <th>Type</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.category_type %></td>
+        <td><%= link_to '', product, :class => "glyphicon glyphicon-eye-open btn btn-xs btn-default" %>
+          <% if can? :update, product %>
+            <%= link_to '', edit_product_path(product), :class => "glyphicon glyphicon-pencil btn btn-xs btn-default"  %>
+            <%= link_to '', product, method: :delete, :class => "glyphicon glyphicon-remove-circle btn btn-xs btn-default", data: { confirm: 'Are you sure?' } %>
+          <% end %> 
+          </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>  
+
+</span>
+

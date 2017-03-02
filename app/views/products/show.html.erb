@@ -1,0 +1,21 @@
+<div class="text-center" style="padding:50px 0">
+<h1>Product Details </h1>
+
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @product.category_type %>
+</p>
+
+<div class="col-sm-12"><br />
+<% if can? :update, @product %>
+<%= link_to ' ', edit_product_path(@product), class: "glyphicon glyphicon-pencil btn btn-xs btn-default"  %> |
+<% end %>
+<%= link_to ' ', products_path, class: "btn btn-xs btn-default glyphicon glyphicon-arrow-left" %>
+</div>
+</div>
