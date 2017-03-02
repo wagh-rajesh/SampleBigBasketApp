@@ -3,22 +3,13 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+Things to run before starting app
 
-* Ruby version
+* Clone the app
 
-* System dependencies
+* Run the migrations : rake db:migrate
 
-* Configuration
+* Seed the database : rake db:seed
 
-* Database creation
+* Use the default user details which will be displayed for admin and customer after running seed commands.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
