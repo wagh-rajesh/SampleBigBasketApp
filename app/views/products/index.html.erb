@@ -4,7 +4,11 @@
   <tr>
     <td><h3 style="padding-left: 20px">Products Inventory</h3></td> <br /> 
     <div>&nbsp;</div>
-    <td style="padding-left: 10px;padding-top: 10px"><%= link_to '', new_product_path, :class => "glyphicon glyphicon-plus-sign btn btn-default" %></td>
+    <% if(!@products.nil?) %>
+      <% if can? :update, @products.first %>
+      <td style="padding-left: 10px;padding-top: 10px"><%= link_to '', new_product_path, :class => "glyphicon glyphicon-plus-sign btn btn-default" %></td>
+      <% end %>
+    <% end %>
   </tr>
 </table>
 
